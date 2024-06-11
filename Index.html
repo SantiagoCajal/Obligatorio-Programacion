@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<link rel="stylesheet" href=css/ejemploCSS.css>
+		<meta charset= "utf.8">
+		<meta name ="viewport" content="width=devide-width, initial-scale=1.0">
+		<title> ¡Trivia! </title>
+		<link rel = "stylesheet" href "ejemploCSS.css">
+	</head>
+	<body>
+		<div class="naranja">
+			<div class="container1">
+				<img src= "imagenes/trivia.png" alt= "Trivia"
+				width = "550px">
+			</div>
+			<a id = "Tope"> </a>
+			<ul class="center"> 
+				<span> <li> <a href = ""> Información General </a> </span>
+				<span> <li> <a href = ""> Administrar </a> </span>
+				<span> <li> <a href = ""> ¡Jugar! </a> </span>
+			</ul>
+		</div>
+		<div class="amarillo">
+			<h1> <p class="center"> Descripción General </p> </h1>
+			<hr>
+			<h2> <p class="center"> ¿Que encontrarás en este lugar? </p> </h2>
+			<p> En este sitio podrás crear teamas, preguntas y jugar a nuestra versión del conocido juego de trivia. </p> 
+			<p> Es una prueba de conocimientos generales con preguntas y respuestas </p> 
+			<p> Cada tema tiene un nombre y una descripción. Cada pregunta es de un tema, tiene un nivel de dificultad (Siendo 1 el más facil, hasta el 5 siendo el más dificil), un texto que la describe y te aparecerán varias respuestas, pero una sola es la correcta. Si respondes bien, sumas 10 puntos, por cada error pierdes un punto, ¡pero puedes usar ayuda! </p>
+			<p> El sitio fue desarollado en el 1er. semestre 2024 - Programación I - Universidad ORT Uruguay por: </p>
+		
+			<img src= "imagenes/jj.jpg"
+			width = "300px">   
+			<span> Joaquin Jauregui (312103) </span>
+			<img src= "imagenes/santi.jpg"
+			width = "300px">
+			<span> Santiago Cajal Mayola (282766) </span>
+	</div>
+	<div class="mostaza">
+			<h1> <p class="center"> GESTION DE TEMAS </p>
+			<hr>
+			<h2 class="center"> Alta de temas </h2>
+			<label for= "id nombre"> Nombre </label>
+			<input type = "text" id = "id nombre" name= "nombre" placeholder= "Aqui">
+			<label for= "id descripcion"> Descripción </label>
+			<input type = "text" id = "id descripcion" name = "Descripcion" placeholder= "Aqui">
+			<input type = "button", id = "idBoton"
+			value = "Presioname">
+			<h2> <p class="center"> Datos generales de temas </p> </h2>
+			<p> Lista de temas (total de temas: 0)
+			<li> Sin datos </li>
+			<p> Promedio de preguntas por tema (cantidad total de preguntas/cantidad total de temas): sin datos </p>
+			<p> Temas sin preguntar: </p>
+			<li>Sin datos </li>
+		
+		
+			<h1> <p class="center"> Gestión de preguntas </p> </h1>\
+			<hr>
+			<h2> <p class="center"> Alta de preguntas </p> </h2>
+			<label for= "id temas"> Tema </label>
+			<select>
+		
+			</select>
+			<label for= "idNivel"> Nivel </label> 
+			<input type = "text" id= "idNivel" name= "Nivel"> 
+			<br>
+			<label for = "idTextoP"> Texto de la pregunta </label>
+			<input type= "text" id="idTextoP" name="textpreg">
+			<label for= "idRespC"> Respuestas Correctas </label>
+				<input type= "text" id="idRespC" name="respuestaC">
+			<label for= "idRespI"> Respuestas Incorrectas </label>
+			<input type= "text" id="idRespI" name="respuestaI">
+			<input type= "button", id="idBoton"
+			value = "Agregar">
+			<h2> <p class="center"> Datos generales de preguntas </p> </h2>
+			<p> Total de preguntas registradas: 0 preguntas </p>
+			<p> Máximo puntuaje obtenido por un jugador: sin datos </p>
+			<label for = "idRadioboton"> Preguntas registradas:
+			<input type="radio" id="idRadioboton" name= "Orden nombre tema creciente/nivel creciente"
+			value="Tabla" checked> Orden nombre tema creciente/nivel creciente
+			<input type="radio" id="idRadioBoton" name= "Orden nombre tema decreciente/nivel creciente"
+			value = "tabla" >Orden nombre tema decreciente/nivel creciente
+			
+			<div id="tabla-conteiner">
+				<table border="1">
+					<thead>
+						<tr>
+							<th> Nombre del tema </th>
+							<th> Nivel </th>
+							<th class="columna-larga1">  Texto de la pregunta </th>
+							<th class="columna-larga2"> Respuesta Correcta </th>
+							<th class="columna-larga3"> Respuesta Incorrecta </th>
+						</tr>
+						<tr>
+							<td> .</td>
+						    <td> .</td>
+							<td> .</td>
+							<td> .</td>
+							<td>. </td>
+						</tr>
+						</thead>
+					</thead>
+				</table>
+				
+			</div>
+		</div>
+		<div class="rojo">
+			<h1> <p class="center"> ¡A JUGAR! </p> </h1>
+			<hr>
+			<h2> <p class="center"> Configuración </p> </h2>
+			<label for= "idTemasE"> Tema a elegir </label>
+			<select>
+			</select>
+			<label for= "idNivelJ"> Nivel del juego </label>
+			<input type= "text" id="idNivelJ" name= "Nivel de juego">
+			<input type= "button", id="idBoton"
+			value= "Jugar">
+			<p class="center"> Juego </p>
+			<p> Puntuaje acumulado en esta partida: 0 </p>
+			<p> La pregunta es...: </p>
+			<p class="center1"> TEXTO DE LA PREGUNTA </p>
+		
+			<div class="container2">
+				<input type= "button", class="BotonResp1"
+				value = "Respuesta 1">
+				<input type= "button", class="BotonResp2"
+				value = "Respuesta 2">
+				<input type= "button", class="BotonResp3"
+				value = "Respuesta 3">
+			</div>
+			<div class="container3">
+				<input type= "button", id="idBoton"
+				value = "Ayuda">
+				<input type= "button", id="idBoton"
+				value = "Siguiente pregunta">
+				<input type= "button", id="idBoton"
+				value = "Terminar">
+			</div>
+		</div>
+	</body>
+</html>
