@@ -103,16 +103,23 @@
   .BotonResp2:active {
       background-color: #3E8E41;
   }
-  .BotonResp3 {
-      background-color: #F17B28;
-      color: black;
-      border-radius: 10px;
-      cursor: pointer;
-  }
-  .BotonResp3:hover {
-      background-color: #45A049;
-  }
-  .BotonResp3:active {
-      background-color: #3E8E41;
-  }
+.BotonResp3 {
+    background-color: #F17B28;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.BotonResp3:hover {
+    background-color: #45A049;
+}
+.BotonResp3:active {
+    background-color: #3E8E41;
+}
+.imagenCircular {
+    width: 200px; /* Ajusta el tamaño según tus necesidades */
+    height: 200px; /* Asegúrate de que el ancho y la altura sean iguales para mantener la proporción cuadrada */
+    border-radius: 50%; /* Esto hace que la imagen sea circular */
+    object-fit: cover; /* Esto asegura que la imagen se recorte correctamente si no es perfectamente cuadrada */
+        }
+
   
