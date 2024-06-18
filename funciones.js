@@ -1,9 +1,42 @@
 Class Sistema:
+//Variable que guarda el valor maximo obtenido por un jugador  
 let Max = 0;
+
+//Variable que guarda el puntaje total de esta partida
 let puntajePartida = 0;
 
 //Funcion que al iniciar la pagina consulte si se desea cargar o no datos. Si lo desea guarda todos los temas (clas Tema) y todas las preguntas (class Pregunta) presentes (Asumir datos validos).
+function procesarPreguntas(preguntas, crearInstancias) {
+    if (crearInstancias) {
+        return preguntas.map(pregunta => new Pregunta(
+            pregunta.texto,
+            pregunta.respuestaCorrecta,
+            pregunta.respuestasIncorrectas,
+            pregunta.nivel,
+            pregunta.tema
+        ));
+    } else {
+        return preguntas;
+    }
+}
+
 //Funcion que recibe el nombre de un tema y su descripcion. Comprueba que no exista un Tema con ese nombre, si no existe, crea el tema y su descripcion (class Tema), si existe devolver "El tema ya existe".
+function crearTema(nombre, descripcion) {
+    // Verificar si el tema ya existe
+    let temaExistente = temas.find(tema => tema.nombre === nombre);
+    
+    if (temaExistente) {
+        return "El tema ya existe";
+    } else {
+        // Crear una nueva instancia de Tema
+        let nuevoTema = new Tema(nombre, descripcion);
+        // Agregar el nuevo tema al array de temas
+        temas.push(nuevoTema);
+        return nuevoTema;
+    }
+}
+
+
 //Funcion que calcula el total de temas
 //Funcion que lista todos los temas
 //Funcion que calcula el promedio de temas con dos decimales (CantPre/CantTemas)
