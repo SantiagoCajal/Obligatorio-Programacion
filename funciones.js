@@ -1,6 +1,6 @@
 Class Sistema:
-let Max = 0,
-let puntajePartida = 0,
+let Max = 0;
+let puntajePartida = 0;
 
 //Funcion que al iniciar la pagina consulte si se desea cargar o no datos. Si lo desea guarda todos los temas (clas Tema) y todas las preguntas (class Pregunta) presentes (Asumir datos validos).
 //Funcion que recibe el nombre de un tema y su descripcion. Comprueba que no exista un Tema con ese nombre, si no existe, crea el tema y su descripcion (class Tema), si existe devolver "El tema ya existe".
@@ -22,8 +22,19 @@ let puntajePartida = 0,
 //Funcion que al presionar el boton de "Terminar" muestra en una ventana emergente el puntaje logradoy se vuelve a la configuración del juego
 //Funcion que si durante el juego se accede a otras pestañas de la página, se considera que se termina el juego
 
-Function
 
-Class Tema
+class tema {
+    constructor(nombre, descripcion) {
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+    }
 
-Class Pregunta
+class Pregunta {
+    constructor(texto, respuestaCorrecta, respuestasIncorrectas, nivel, tema) {
+        this.texto = texto;
+        this.respuestaCorrecta = respuestaCorrecta;
+        this.respuestasIncorrectas = respuestasIncorrectas;
+        this.nivel = nivel;
+        this.tema = tema;
+    }
+  
